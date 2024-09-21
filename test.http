@@ -1,0 +1,38 @@
+###
+POST http://localhost:4004/odata/v4/crud/Products
+Content-Type: application/json
+
+{
+    "productId" : "123",
+    "productName" :"Monitor",
+    "productPrice" : "25000"
+}
+
+###
+GET http://localhost:4004/odata/v4/crud/Products
+
+###
+GET http://localhost:4004/odata/v4/crud/Products(productId='74')
+
+
+
+###
+DELETE  http://localhost:4004/odata/v4/crud/Products(productId='476')
+
+
+###
+PUT http://localhost:4004/odata/v4/crud/Products(productId='376')
+Content-Type: application/json
+
+{
+    "productPrice" : "10000"
+}
+
+
+###
+PATCH http://localhost:4004/odata/v4/crud/Products(productId='376')
+Content-Type: application/json
+
+{    
+    "productPrice" : "5000"
+}
